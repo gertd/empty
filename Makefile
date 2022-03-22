@@ -16,6 +16,7 @@ login:
 .PHONY: build
 build:
 	@echo -e "$(ATTN_COLOR)==> $@ $(NO_COLOR)"
+	policy build src -t opcr.io/gertd/empty/$(svu patch --strip-prefix)
 
 .PHONY: tag
 tag:
@@ -24,6 +25,7 @@ tag:
 .PHONY: push
 push:
 	@echo -e "$(ATTN_COLOR)==> $@ $(NO_COLOR)"
+	policy push opcr.io/gertd/empty/$(svu --strip-prefix)
 
 .PHONY: logout
 logout:
