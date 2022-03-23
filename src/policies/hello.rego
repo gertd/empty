@@ -10,6 +10,6 @@ allowed {
 }
 
 allowed {
-    input.version == 2
+    input.version == 3
 }
 
