@@ -4,19 +4,13 @@ package policies.hello
 # only grant access when explicitly granted
 
 default allowed = false
-default visible = false
-default enabled = false
-
-default version = 1
+version = 1
 
 allowed {
     input.role == "web-admin"
 }
 
-enabled {
-    visible
+allowed {
+    input.version == version
 }
 
-visible {
-    input.app == "web-console"
-}
