@@ -30,3 +30,13 @@ push:
 .PHONY: logout
 logout:
 	@echo -e "$(ATTN_COLOR)==> $@ $(NO_COLOR)"
+
+
+.PHONE: update
+update:
+	git add .
+	git commit -am "update"
+	git tag $(svu patch)
+	tag=$(svu --strip-prefix)
+	policy build src -t opcr.io/gertd/empty:${tag}
+	policy push opcr.io/gertd/empty:${tag}
