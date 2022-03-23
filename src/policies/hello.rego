@@ -1,7 +1,7 @@
 package policies.hello
 
 default allowed = false
-default version = 9
+default version = 10
 
 allowed {
     input.version == version
