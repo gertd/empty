@@ -1,15 +1,9 @@
 package policies.hello
 
-# default to a "closed" system, 
-# only grant access when explicitly granted
-
 default allowed = false
+default version = 5
 
 allowed {
-    input.role == "web-admin"
-}
-
-allowed {
-    input.version == 3
+    input.version == version
 }
 
