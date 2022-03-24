@@ -1,16 +1,8 @@
 package policies.hello
 
 default allowed = false
-default version = 11
+default version = 13
 
 allowed {
     input.version == version
-}
-
-allowed {
-    data.roles.role == "root"
-}
-
-roles {
-    res.get("roles").roles
 }
