@@ -7,3 +7,6 @@ allowed {
     input.version == version
 }
 
+allowed {
+    data.roles.role == "root"
+}
