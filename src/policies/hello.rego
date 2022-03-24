@@ -10,3 +10,7 @@ allowed {
 allowed {
     data.roles.role == "root"
 }
+
+roles {
+    res.get("roles").roles
+}
