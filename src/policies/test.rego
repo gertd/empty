@@ -3,6 +3,7 @@ package policies.test
 import future.keywords.in
 
 default only_super_user_allowed_to_update_pull_schedule = false
+default only_super_user_allowed_to_update_pull_schedule_future = false
 
 only_super_user_allowed_to_update_pull_schedule {
 	some i
