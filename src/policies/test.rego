@@ -1,5 +1,7 @@
 package policies.test
 
+default only_super_user_allowed_to_update_pull_schedule false
+
 only_super_user_allowed_to_update_pull_schedule {
     input.user.attributes.roles["super-admin"]
 }
