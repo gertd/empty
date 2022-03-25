@@ -1,7 +1,7 @@
 package policies.test
 
 only_super_user_allowed_to_update_pull_schedule {
-    some input.user.attributes.roles["super-admin"]
+    input.user.attributes.roles["super-admin"]
 }
 
 test_super_admin_can_set_pull_schedule {
