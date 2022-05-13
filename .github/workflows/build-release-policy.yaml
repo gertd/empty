@@ -29,7 +29,7 @@ jobs:
         docker_image: ${{ steps.config.outputs.repo }}
         docker_registry: ${{ steps.config.outputs.server }}
         docker_username: ${{ steps.config.outputs.username }}
-        docker_password: ${{ secrets.GITHUB_TOKEN }}
+        docker_password: ${{ secrets.OPCR_PUSH }}
 
     - name: Calculate image tags
       id: "tags"
@@ -45,7 +45,7 @@ jobs:
       uses: opcr-io/policy-login-action@v2
       with:
         username: ${{ steps.config.outputs.username }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ secrets.OPCR_PUSH }}
         server: ${{ steps.config.outputs.server }}
 
     - name: Policy Build
