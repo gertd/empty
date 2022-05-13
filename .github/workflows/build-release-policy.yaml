@@ -80,4 +80,3 @@ jobs:
       uses: opcr-io/policy-logout-action@v2
       with:
         server: ${{ steps.config.outputs.server }}
-er }}
